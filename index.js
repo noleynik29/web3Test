@@ -17,7 +17,7 @@ const server = http.createServer((req, res) =>{
         balanceArray = await getTokenInfo()
         writeToFile(JSON.stringify(balanceArray))
         res.end(JSON.stringify(balanceArray))
-    }, 10000)
+    }, 60000)
 })
 
 server.listen(port, host, () => {
